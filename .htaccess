@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on 
+RewriteBase /AppManagementSystem/
+RewriteRule ^(services|back)/(.*)/(.*)/(.*)$ index.php?onpage=$1&url=$2&a=$3&id=$4 [L,QSA]
+RewriteRule ^(services|back)/(.*)/(.*)$ index.php?onpage=$1&url=$2&a=$3 [L,QSA]
+RewriteRule ^(services|back)/(.*)$ index.php?onpage=$1&url=$2&a=index [L,QSA]
+RewriteRule ^(services|back)$ index.php?onpage=$1&url=$home&a=index [L,QSA]
+#back
+RewriteRule ^itoffside-admin$ index.php?onpage=back&url=home&a=index [L,QSA]
+#view users
+RewriteRule ^users/(.*)/(.*)$ index.php?onpage=services&url=users [L,QSA]
+RewriteRule ^category/(.*)/(.*)$ index.php?onpage=services&url=category [L,QSA]
+RewriteRule ^income/(.*)/(.*)$ index.php?onpage=services&url=income [L,QSA]
+RewriteRule ^dailyExpenses/(.*)/(.*)$ index.php?onpage=services&url=dailyExpenses [L,QSA]
+RewriteRule ^fixedExpenses/(.*)/(.*)$ index.php?onpage=services&url=fixedExpenses [L,QSA]
+
+</IfModule>
