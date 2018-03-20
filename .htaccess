@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on 
-RewriteBase /AppManagementSystemMaster/
+RewriteBase /AppManagement/
 RewriteRule ^(services|back)/(.*)/(.*)/(.*)$ index.php?onpage=$1&url=$2&a=$3&id=$4 [L,QSA]
 RewriteRule ^(services|back)/(.*)/(.*)$ index.php?onpage=$1&url=$2&a=$3 [L,QSA]
 RewriteRule ^(services|back)/(.*)$ index.php?onpage=$1&url=$2&a=index [L,QSA]

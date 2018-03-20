@@ -1,11 +1,11 @@
 <?php
 
 function base_url() {
-    return "http://localhost/AppManagementSystemMaster";
+    return "http://localhost/AppManagement";
 }
 
 function base_path() {
-    return $_SERVER['DOCUMENT_ROOT'] . "/AppManagementSystemMaster";
+    return $_SERVER['DOCUMENT_ROOT'] . "/AppManagement";
 }
 
 function salt_pass($pass) {
