@@ -1,3 +1,3 @@
 <?php
 
-define("_ss", "AppManagementSystem");
+define("_ss", "AppManagementSystemMaster");
