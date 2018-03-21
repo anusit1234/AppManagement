@@ -104,6 +104,9 @@ require 'template/back/header.php';
                             <th id="user-grid_c2">
                                 <a class="sort-link" href="<?php echo $uri; ?>">สถานะ</a>
                             </th>
+                            <th id="user-grid_c1">
+                                <a class="sort-link" href="<?php echo $uri; ?>">วันที่เพิ่ม</a>
+                            </th>
 <!--                            <th id="user-grid_c4">
                                 <a class="sort-link" href="<?php echo $uri; ?>">วันเวลาที่ร้าง</a>
                             </th>-->
@@ -124,6 +127,9 @@ require 'template/back/header.php';
                                     <a class="load_data" href="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['name']; ?></a>
                                 </td>
                                 <td><?php if($rs_pc['status']=="1"){echo"จำเป็น";}else{echo"ไม่จำเป็น";}; ?></td>
+                                <td>
+                                    <a class="load_data" href="<?php echo $baseUrl; ?>/back/incomeCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['created']; ?></a>
+                                </td>
   <!--                              <td><?php echo thaidate($rs_pc['created']); ?></td>-->
                                 <td class="button-column">
                                     <a class="btn btn-warning btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie/update/<?php echo $rs_pc['id']; ?>"><i class="glyphicon glyphicon-edit"></i> แก้ไข</a>

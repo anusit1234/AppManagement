@@ -68,7 +68,7 @@ require 'template/back/header.php';
                     
                 
 
-                <a role="button" class="search-button btn btn-default btn-xs" href="<?php echo $baseUrl; ?>/back/user">
+                <a role="button" class="search-button btn btn-default btn-xs" href="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie">
                     <i class="glyphicon glyphicon-remove-circle"></i>
                     ยกเลิก
                 </a>

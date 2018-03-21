@@ -15,7 +15,7 @@
 
     <body>
         <div id="warpper">
-            <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#1975ac; role="navigation">
+            <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#154f87; role="navigation">
                 <div class="navbar-header">
                     <a class="navbar-brand" ><font color="#fff">ระบบจัดการข้อมูลแอปพลิเคชันตรวจสุขภาพทางการเงิน</font></a>
                 </div>

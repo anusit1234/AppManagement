@@ -99,6 +99,9 @@ require 'template/back/header.php';
                             <th id="user-grid_c0">
                                 <a class="sort-link" href="<?php echo $uri; ?>">หมวดหมู่รายจ่ายคงที่</a>
                             </th>
+                            <th id="user-grid_c1">
+                                <a class="sort-link" href="<?php echo $uri; ?>">วันที่เพิ่ม</a>
+                            </th>
 <!--                            <th id="user-grid_c1">
                                 <a class="sort-link" href="<?php echo $uri; ?>">รหัส</a>
                             </th>-->
@@ -120,6 +123,9 @@ require 'template/back/header.php';
                                 </td> -->
                                 <td>
                                     <a class="load_data" href="<?php echo $baseUrl; ?>/back/fixedExpensesCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['name']; ?></a>
+                                </td>
+                                <td>
+                                    <a class="load_data" href="<?php echo $baseUrl; ?>/back/incomeCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['created']; ?></a>
                                 </td>
                                 <!--<td><?php echo $rs_pc['codename']; ?></td>-->
   <!--                              <td><?php echo thaidate($rs_pc['created']); ?></td>-->

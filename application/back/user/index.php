@@ -26,7 +26,7 @@ require 'template/back/header.php';
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><font size="5"><font color="#000">จัดการผู้ใช้งาน</font></font></h1>
+            <h1 class="page-header"><font size="5"><font color="#000">จัดการผู้ใช้งาน (ผู้ดูแลระบบ)</font></font></h1>
         </div>
     </div>
     <div class="row">

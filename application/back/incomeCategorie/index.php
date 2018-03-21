@@ -91,7 +91,7 @@ require 'template/back/header.php';
                 </form>
             </div><!-- search-form -->
             <div id="user-grid" class="table table-striped table-bordered">
-                <div class="summary">หน้า <?php echo $page;?> จากทั้งหมด <?php echo $pages; ?> หน้า</div>
+                <!-- <div class="summary">หน้า <?php echo $page;?> จากทั้งหมด <?php echo $pages; ?> หน้า</div> -->
                 <table class="table table-striped table-custom">
                     <thead>
                         <tr>
@@ -159,11 +159,11 @@ require 'template/back/header.php';
         </div>
     </div>
     <div class="row">
-      <div class="col-sm-12">
+      <!-- <div class="col-sm-12">
           <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
               <ul class="pagination"><li class="paginate_button active"><a tabindex="0" data-dt-idx="1" aria-controls="itoffside.com" href="#">1</a></li><li class="paginate_button"><a data-ci-pagination-page="2" href="http://localhost/stock/flowprint/index/14">2</a></li><li class="paginate_button next"><a rel="next" data-ci-pagination-page="2" href="http://localhost/stock/flowprint/index/14">Next</a></li></ul>                            </div>
 
-      </div>
+      </div> -->
     </div>
 
     <script type="text/javascript">

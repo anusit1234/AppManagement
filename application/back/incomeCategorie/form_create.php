@@ -12,22 +12,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if($rows > 0){
         echo "<script>";
-        echo "alert(' มีข้อมูลนี้อยู่แล้ว กรุณากรอกข้อมูลใหม่อีกครั้ง');";
-        echo "window.location='<?php  $baseUrl; ?>/back/incomeCategorier'";
+        echo "alert(' มีข้อมูลนี้อยู่ในระบบแล้ว กรุณากรอกข้อมูลใหม่อีกครั้ง');";
+        echo "window.location='$baseUrl/back/incomeCategorie/create'";
         echo "</script>";
     }
     else{
         $value_pc = array(
             "name" => trim($_POST['name']),
-            "created" => date('Y-m-d H:i:s')
+            "created" => date('Y-m-d')
         );
         $query_pc = $db->insert("income_categories", $value_pc);
 
         
         if ($query_pc == TRUE) {
                 echo "<script>";
-                header("location:" . $baseUrl . "/back/incomeCategorie");
+                // header("location:" . $baseUrl . "/back/alert2");
                 echo "alert('บันทึกข้อมูลสำเร็จ');";
+                echo "window.location='$baseUrl/back/incomeCategorie'";
                 echo "</script>";
         }
 
