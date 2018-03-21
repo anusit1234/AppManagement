@@ -91,13 +91,11 @@ require 'template/back/header.php';
                 </form>
             </div><!-- search-form -->
             <div id="user-grid" class="grid-view">
-                <div class="summary">หน้า <?php echo $page;?> จากทั้งหมด <?php echo $pages; ?> หน้า</div>
+                <!-- <div class="summary">หน้า <?php echo $page;?> จากทั้งหมด <?php echo $pages; ?> หน้า</div> -->
                 <table class="table table-striped table-custom">
                     <thead>
                         <tr>
-                            <th id="user-grid_c0">
-                                <a class="sort-link" href="<?php echo $uri; ?>">ลำดับรายจ่ายคงที่</a>
-                            </th>
+                            
                             <th id="user-grid_c0">
                                 <a class="sort-link" href="<?php echo $uri; ?>">หมวดหมู่รายจ่ายคงที่</a>
                             </th>
@@ -117,9 +115,9 @@ require 'template/back/header.php';
                             $tr = ($i % 2 == 0) ? "odd" : "even";
                             ?>
                             <tr class="<?php echo $tr; ?>">
-                                <td>
+                                <!-- <td>
                                     <a class="load_data" href="<?php echo $baseUrl; ?>/back/fixedExpensesCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['id']; ?></a>
-                                </td>
+                                </td> -->
                                 <td>
                                     <a class="load_data" href="<?php echo $baseUrl; ?>/back/fixedExpensesCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['name']; ?></a>
                                 </td>
@@ -159,10 +157,10 @@ require 'template/back/header.php';
     </div>
     <div class="row">
       <div class="col-sm-12">
-          <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+          <!-- <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
               <ul class="pagination"><li class="paginate_button active"><a tabindex="0" data-dt-idx="1" aria-controls="itoffside.com" href="#">1</a></li><li class="paginate_button"><a data-ci-pagination-page="2" href="http://localhost/stock/flowprint/index/14">2</a></li><li class="paginate_button next"><a rel="next" data-ci-pagination-page="2" href="http://localhost/stock/flowprint/index/14">Next</a></li></ul>                            </div>
 
-      </div>
+      </div> -->
     </div>
 
     <script type="text/javascript">

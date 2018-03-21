@@ -15,12 +15,12 @@
 
     <body>
         <div id="warpper">
-            <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#33638c; role="navigation">
+            <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#1975ac; role="navigation">
                 <div class="navbar-header">
                     <a class="navbar-brand" ><font color="#fff">ระบบจัดการข้อมูลแอปพลิเคชันตรวจสุขภาพทางการเงิน</font></a>
                 </div>
-                <ul class="nav navbar-top-links navbar-right" >
-                <a><?php echo  $_SESSION[_ss . 'email']; ?></a>
+                <ul class="nav navbar-top-links navbar-right"  >
+                <a ><?php echo  $_SESSION[_ss . 'email']; ?></a>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                             <i class="glyphicon glyphicon-user"></i> <span class="caret"></span>
@@ -45,14 +45,17 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="navbar-default navbar-static-side" role="navigation">
+                <div class="navbar-default navbar-static-side"style="background-color:#f9f9f9; role="navigation">
                     <div class="sidebar-collapse">
                         <ul id="side-menu" class="nav" >
                             <li>
                                 <a href="<?php echo $baseUrl; ?>/itoffside-admin"><i class="glyphicon glyphicon-home"></i> หน้าแรก</a>
                             </li>
                             <li>
-                                <a href="<?php echo $baseUrl; ?>/back/user"><i class="glyphicon glyphicon-user"></i> ผู้ใช้ (สมาชิก)</a>
+                                <a href="<?php echo $baseUrl; ?>/back/memberApp"><i class="glyphicon glyphicon-user"></i> ผู้ใช้งานแอปพลิเคชัน</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $baseUrl; ?>/back/user"><i class="glyphicon glyphicon-user"></i> ผู้ใช้ (ผู้ดูแลระบบ)</a>
                             </li>
                             <li>
                                 <a href="<?php echo $baseUrl; ?>/back/incomeCategorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายรับ</a>

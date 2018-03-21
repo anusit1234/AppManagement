@@ -6,7 +6,7 @@ $title = 'ระบบจัดการข้อมูลแอปพลิเ�
 $db = new database();
 $option_user = array(
     "table" => "users",
-    "condition" => "permission = 'admin'"
+    "condition" => "permission = 'member'"
 );
 $query_user = $db->select($option_user);
 
@@ -26,13 +26,13 @@ require 'template/back/header.php';
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><font size="5"><font color="#000">จัดการผู้ใช้งาน</font></font></h1>
+            <h1 class="page-header"><font size="5"><font color="#000">ผู้ใช้งานแอปพลิเคชัน</font></font></h1>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12">
             <div class="subhead">
-                <a role="button" class="btn btn-success btn-xs new-data"
+                <!-- <a role="button" class="btn btn-success btn-xs new-data"
                    href="<?php echo $baseUrl; ?>/back/user/create">
                     <i class="glyphicon glyphicon-plus-sign"></i>
                     เพิ่มใหม่
@@ -40,7 +40,7 @@ require 'template/back/header.php';
                 <a role="button" class="search-button btn btn-default btn-xs" href="#">
                     <i class="glyphicon glyphicon-search"></i>
                     ค้นหา
-                </a>
+                </a> -->
                <!-- <a role="button" class="btn btn-default btn-xs" 
                    href="<?php echo $baseUrl; ?>/back/user">
                     <i class="glyphicon glyphicon-refresh"></i>
@@ -118,7 +118,7 @@ require 'template/back/header.php';
                             <th id="user-grid_c4">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=permission">สิทธิ์ผู้ใช้</a>
                             </th>
-                            <th class="button-column" id="user-grid_c6">&nbsp;</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -138,10 +138,10 @@ require 'template/back/header.php';
                                 <td><?php echo $rs_user['sex']; ?></td>
                                 <td><?php echo $rs_user['career']; ?></td>
                                 <td><?php if($rs_user['permission']=="admin"){echo"ผู้ดูแลระบบ";}else{echo"สมาชิก";}; ?></td>
-                                <td class="button-column">
+                                
                                     <!--<a class="btn btn-info btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/user/<?php echo $rs_user['id']; ?>"><i class="glyphicon glyphicon-zoom-in"></i> รายละเอียด</a>-->
-                                    <a class="btn btn-warning btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/user/update/<?php echo $rs_user['id']; ?>"><i class="glyphicon glyphicon-edit"></i> แก้ไข</a>
-                                    <a class="btn btn-danger btn-xs confirm" title="" href="#" data-toggle="modal" data-target="#deleteModal<?php echo $rs_user['id'];?>"><i class="glyphicon glyphicon-remove"></i> ลบ</a>
+                                    <!-- <a class="btn btn-warning btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/user/update/<?php echo $rs_user['id']; ?>"><i class="glyphicon glyphicon-edit"></i> แก้ไข</a>
+                                    <a class="btn btn-danger btn-xs confirm" title="" href="#" data-toggle="modal" data-target="#deleteModal<?php echo $rs_user['id'];?>"><i class="glyphicon glyphicon-remove"></i> ลบ</a> -->
                                     <!-- Modal -->
                                     <div class="modal fade" id="deleteModal<?php echo $rs_user['id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">

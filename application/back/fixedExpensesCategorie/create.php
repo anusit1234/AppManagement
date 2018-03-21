@@ -32,8 +32,13 @@ require 'template/back/header.php';
                     <div class="form-group">
                         <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดหมู่รายจ่ายคงที่ <span class="required">*</span></label>
                         <div class="col-sm-4">
-                            
-                            <input id="name" name="name" class="form-control input-sm" minlength="2" type="text" required>
+                        <table width="420">
+                            <tr>
+                                <td><input placeholder="กรอกชื่อหมวดหมู่รายจ่ายคงที่" id="name" name="name" class="form-control input-sm" minlength="4" type="text" required></td>
+                                <td><font color="red">&nbsp;<b>*</b></font></td>
+                            </tr>
+                        </table>
+                                <br>
                         </div>
                     </div>
 <!--                    <div class="form-group">
@@ -48,7 +53,7 @@ require 'template/back/header.php';
     </div>
     
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-8">
             <div class="submit">
                 <input role="button" id="save" type="submit"  class="btn btn-success btn-xs new-data" href="#" value="บันทึก"class="glyphicon glyphicon-floppy-save">
                     

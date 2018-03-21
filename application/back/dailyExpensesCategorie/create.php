@@ -30,19 +30,30 @@ require 'template/back/header.php';
             <div class="form-horizontal" style="margin-top: 10px;">
                 
                     <div class="form-group">
-                        <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดหมู่รายจ่ายรายวัน <span class="required">*</span></label>
+                        <label  for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดหมู่รายจ่ายรายวัน <span class="required"></span></label>
                         <div class="col-sm-4">
-                            <input id="name" name="name" class="form-control input-sm" minlength="2" type="text" required>
-                        </div>
+                        <table width="420">
+                            <tr>
+                                <td><input placeholder="กรอกชื่อหมวดหมู่รายจ่ายรายวัน" id="name" name="name" class="form-control input-sm" minlength="5" type="text" required></td>
+                                <td><font color="red">&nbsp;<b>*</b></font></td>
+                            </tr>
+                        </table>
+                            </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="User_ststus">สถานะ</label>
                         <div class="col-sm-4">
-                            <select class="form-control input-sm" name="status" id="status" required>
+                        <table width="440">
+                            <tr>
+                            <td><select class="form-control input-sm" name="status" id="status" required>
                                 <option value="">--เลือก--</option>
                                 <option value="1">จำเป็น</option>
-                                <option value="0">ไม่จำเป็น</option>
+                                <option value="0">ไม่จำเป็น</option></td>
                             </select>
+                            <td><font color="red">&nbsp;<b>*</b></font></td>
+                            </tr>
+                        </table>
+                            <br>
                         </div>
                     </div>
                 
