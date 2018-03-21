@@ -2,17 +2,21 @@
 $db = new database();
 $value_user = array(
     "name" => trim($_POST['name']),
-    "username" => trim($_POST['username']),
+    "surname" => trim($_POST['surname']),
+    "email" => trim($_POST['email']),
     "password" => trim($_POST['password']),
     "age" => trim($_POST['age']),
     "sex" => trim($_POST['sex']),
     "career" => trim($_POST['career']),
-    "email" => trim($_POST['email']),
     "permission" => trim($_POST['permission'])
 );
 $con_user = "id='{$_GET['id']}'";
 $query_user = $db->update("users", $value_user, $con_user);
 
 if($query_user == TRUE){
-    header("location:" . $baseUrl . "/back/user");
+    // header("location:" . $baseUrl . "/back/user");
+    echo "<script>";
+    echo "alert('แก้ไขข้อมูลสำเร็จ');";
+    echo "window.location='$baseUrl/back/user'";
+    echo "</script>";
 }

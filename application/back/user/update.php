@@ -98,11 +98,15 @@ require 'template/back/header.php';
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="User_permission">สิทธิ์การใช้งาน</label>
                         <div class="col-sm-4">
-                            <select class="form-control input-sm" name="permission" id="permission">
+                            <input class="form-control input-sm" maxlength="100" name="permission" id="permission" type="hidden" value="<?php echo $rs_user['permission'];?>" />
+
+                            <p class="form-control input-sm"  ><i><?php if($rs_user['permission']=="member"){echo"สมาชิก";}else{echo"ผู้ดูแลระบบ";}?></i></p>
+
+                            <!-- <select class="form-control input-sm" name="permission" id="permission">
                                 <option value="<?php echo $rs_user['permission'];?>" ><?php if($rs_user['permission']=="member"){echo"สมาชิก";}else{echo"ผู้ดูแลระบบ";}?></option>
-                                <option value="member">สมาชิก</option>
+                                <!-- <option value="member">สมาชิก</option> 
                                 <option value="admin">ผู้ดูแลระบบ</option>
-                            </select>
+                            </select> -->
                         </div>
                     </div>
                 </form>
