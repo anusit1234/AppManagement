@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>";
         // header("location:" . $baseUrl . "/back/alert2");
         echo "alert('แก้ไขข้อมูลสำเร็จ');";
-        echo "window.location='$baseUrl/back/daily_expenses_categories'";
+        echo "window.location='$baseUrl/back/dailyExpensesCategorie'";
         echo "</script>";
         // header("location:" . $baseUrl . "/back/dailyExpensesCategorie");
     }

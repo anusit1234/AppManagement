@@ -4,12 +4,27 @@
  */
 $title = 'ระบบจัดการข้อมูลแอปพลิเคชัน : ผู้ใช้';
 $db = new database();
-$option_user = array(
-    "table" => "users",
-    "condition" => "permission = 'member'"
-);
-$query_user = $db->select($option_user);
+// $option_user = array(
+//     "table" => "users",
+//     "condition" => "permission = 'member'"
+// );
+// $query_user = $db->select($option_user);
 
+$sql_pc = "SELECT * FROM users where permission='member'";
+$sql_pc .= isset($_GET['name']) ? "AND name LIKE '%{$_GET['name']}%'" : "";
+$sql_pc .= isset($_GET['surname']) ? "AND surname LIKE '%{$_GET['surname']}%'" : "";
+$sql_pc .= isset($_GET['email']) ? "AND name LIKE '%{$_GET['email']}%'" : "";
+
+$query_pc = $db->query($sql_pc);
+// $rows_pc = $db->rows($query_pc);
+
+// $per_page = 20;
+// $page_start = (($pagination->get_page() - 1) * $per_page);
+// $sql_pc .= "ORDER BY id DESC LIMIT {$page_start},{$per_page} ";
+// $pagination->records($rows_pc);
+// $pagination->records_per_page($per_page);
+// $pagination->base_url('', FALSE);
+// $query_pc_page = $db->query($sql_pc);
 /*
  * php code///////////**********************************************************
  */
@@ -36,11 +51,11 @@ require 'template/back/header.php';
                    href="<?php echo $baseUrl; ?>/back/user/create">
                     <i class="glyphicon glyphicon-plus-sign"></i>
                     เพิ่มใหม่
-                </a>
+                </a>-->
                 <a role="button" class="search-button btn btn-default btn-xs" href="#">
                     <i class="glyphicon glyphicon-search"></i>
                     ค้นหา
-                </a> -->
+                </a>
                <!-- <a role="button" class="btn btn-default btn-xs" 
                    href="<?php echo $baseUrl; ?>/back/user">
                     <i class="glyphicon glyphicon-refresh"></i>
@@ -53,7 +68,7 @@ require 'template/back/header.php';
         <div class="col-lg-12">
             <div class="search-form" style="display:none">
 
-                <form id="yw0" action="<?php echo $baseUrl; ?>/back/user/index" method="get"><div class="form-horizontal" style="margin-top: 10px;">
+                <form id="yw0" action="<?php echo $baseUrl; ?>/back/memberApp/index" method="get"><div class="form-horizontal" style="margin-top: 10px;">
                         <!-- <div class="form-group">
                             <label for="Username" class="col-sm-2 control-label">Username</label>
                             <div class="col-sm-4">
@@ -61,17 +76,25 @@ require 'template/back/header.php';
                         </div> -->
 
                         <div class="form-group">
-                            <label for="Username" class="col-sm-2 control-label">ชื่อ</label>
+                            <label for="name" class="col-sm-2 control-label">ชื่อ</label>
                             <div class="col-sm-4">
-                                <input size="60" maxlength="100" class="form-control input-sm" name="User[name]" id="User_name" type="text" />        </div>
+                                <input size="60" maxlength="100" class="form-control input-sm" name="name" id="name" type="text" />        
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="Username" class="col-sm-2 control-label">นามสกุล</label>
+                            <label for="surname" class="col-sm-2 control-label">นามสกุล</label>
                             <div class="col-sm-4">
-                                <input size="60" maxlength="100" class="form-control input-sm" name="User[name]" id="User_name" type="text" />        </div>
+                                <input size="60" maxlength="100" class="form-control input-sm" name="surname" id="surname" type="text" />        
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">นามสกุล</label>
+                            <div class="col-sm-4">
+                                <input size="60" maxlength="100" class="form-control input-sm" name="email" id="email" type="text" />        
+                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="Username" class="col-sm-2 control-label">ประเภท</label>
                             <div class="col-sm-4">
                                 <select class="form-control input-sm" name="User[permission]" id="User_permission">
@@ -80,7 +103,7 @@ require 'template/back/header.php';
                                     <option value="admin">ผู้ดูแลระบบ</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-4">
                                 <button type="submit" class="btn btn-primary searchbtn"><i class="glyphicon glyphicon-search"></i> ค้นหาเดี๋ยวนี้!</button>
@@ -118,13 +141,16 @@ require 'template/back/header.php';
                             <th id="user-grid_c4">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=permission">สิทธิ์ผู้ใช้</a>
                             </th>
-                            
+                            <th id="user-grid_c4">
+                                <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=created">สิทธิ์ผู้ใช้</a>
+                            </th>
+
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         $i = 0;
-                        while ($rs_user = $db->get($query_user)) {
+                        while ($rs_user = $db->get($query_pc)) {
                             $tr = ($i % 2 == 0) ? "odd" : "even";
                             ?>
                             <tr class="<?php echo $tr; ?>">
@@ -138,6 +164,7 @@ require 'template/back/header.php';
                                 <td><?php echo $rs_user['sex']; ?></td>
                                 <td><?php echo $rs_user['career']; ?></td>
                                 <td><?php if($rs_user['permission']=="admin"){echo"ผู้ดูแลระบบ";}else{echo"สมาชิก";}; ?></td>
+                                <td><?php echo $rs_user['created']; ?></td>
                                 
                                     <!--<a class="btn btn-info btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/user/<?php echo $rs_user['id']; ?>"><i class="glyphicon glyphicon-zoom-in"></i> รายละเอียด</a>-->
                                     <!-- <a class="btn btn-warning btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/user/update/<?php echo $rs_user['id']; ?>"><i class="glyphicon glyphicon-edit"></i> แก้ไข</a>

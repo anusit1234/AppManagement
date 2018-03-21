@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     else{
         $value_pc = array(
             "name" => trim($_POST['name']),
-            "created" => date('d-m-Y')
+            "created" => date('Y-m-d')
         );
         $query_pc = $db->insert("fixed_expenses_categories", $value_pc);
 

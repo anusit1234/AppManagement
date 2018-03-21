@@ -23,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             "age" => trim($_POST['age']),
             "sex" => trim($_POST['sex']),
             // "career" => trim($_POST['career']),
-            "permission" => trim($_POST['permission'])
+            "permission" => trim($_POST['permission']),
+            "created" => date('Y-m-d')
         );
         $query_user = $db->insert("users", $value_user);
 
