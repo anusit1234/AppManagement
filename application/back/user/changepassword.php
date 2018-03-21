@@ -50,11 +50,12 @@ require 'template/back/header.php';
             </div>
         <?php } ?> -->
     </div>
-    
+    <!-- <form id="user-form" action="<?php echo $baseUrl; ?>/back/user/form_changepassword/<?php echo $rs_user['id']; ?>" method="post"> -->
+    <form  id="user-form" action="<?php echo $baseUrl; ?>/back/user/form_changepassword" method="post" >
     <div class="row">
         <div class="col-lg-12">
             <div class="form-horizontal" style="margin-top: 10px;">
-                <form id="user-form" action="<?php echo $baseUrl; ?>/back/user/form_changepassword/<?php echo $rs_user['id']; ?>" method="post">
+               
                     <input type="hidden" name="id" value="<?php echo $rs_user['id']; ?>">
                     <div class="form-group">
                         <label class="col-sm-2 control-label required" for="User_username">อีเมล</label>
@@ -65,34 +66,32 @@ require 'template/back/header.php';
                     <div class="form-group">
                         <label class="col-sm-2 control-label">รหัสผ่านเก่า</label>
                         <div class="col-sm-4">
-                            <input class="form-control input-sm" maxlength="50" name="oldpassword" id="oldpassword" type="password" value="" />
+                            <input class="form-control input-sm" maxlength="50" name="oldpassword" id="oldpassword" type="password" required />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">รหัสผ่านใหม่</label>
                         <div class="col-sm-4">
-                            <input class="form-control input-sm" name="pass_confirmation" type="password" data-validation="length" data-validation-length="min8" />
+                            <input class="form-control input-sm" name="pass_confirmation" type="password" required />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">รหัสผ่านใหม่อีกครั้ง</label>
                         <div class="col-sm-4">
-                            <input class="form-control input-sm" name="pass" data-validation="confirmation" type="password" />
+                            <input class="form-control input-sm" name="password" id="password" type="password" required />
                         </div>
-                    </div>
-                </form>
+                    </div>    
             </div>
         </div>
     </div>
+    
     <div class="row">
         <div class="col-lg-12">
-            <div class="subhead">
+            <div class="submit">
                 
                 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-                <a role="button" id="save" class="btn btn-success btn-xs new-data" href="#">
-                    <i class="glyphicon glyphicon-floppy-save"></i>
-                    Save
-                </a>
+                <input role="button" id="save" type="submit"  class="btn btn-success btn-xs new-data" href="#" value="บันทึก"class="glyphicon glyphicon-floppy-save" >
+                    
                 <a role="button" class="search-button btn btn-default btn-xs" href="<?php echo $baseUrl; ?>/back/user">
                     <i class="glyphicon glyphicon-remove-circle"></i>
                     Cancel
@@ -100,17 +99,15 @@ require 'template/back/header.php';
             </div>
         </div>
     </div>
+    </form>
 </div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#save").click(function () {
-            $("#user-form").submit();
-            return false;
-        });
-    });
-    $.validate({
-        modules: 'security'
-    });
+
+<script >
+$("#user-form").validate();
+$(document).ready(function) {
+    $("#save").submit();
+}
+    
 </script>
 <?php
 /*
