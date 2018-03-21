@@ -4,6 +4,7 @@
  */
 $db = new database();
 
+
 $title = 'เพิ่มหมวดหมู่รายรับ';
 /*
  * php code///////////**********************************************************
@@ -16,12 +17,16 @@ require 'template/back/header.php';
 /*
  * header***********************************************************************
  */
+
+
+
 ?>
 <script type="text/javascript" src="<?php echo $baseUrl; ?>/js/jquery.form-validator.min.js"></script>
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">เพิ่มหมวดหมู่รายรับ</h1>
+            
         </div>
     </div>
     <form id="product-form" action="<?php echo $baseUrl; ?>/back/incomeCategorie/form_create" method="post">

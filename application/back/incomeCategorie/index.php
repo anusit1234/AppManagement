@@ -95,15 +95,15 @@ require 'template/back/header.php';
                 <table class="table table-striped table-custom">
                     <thead>
                         <tr>
-                            <th id="user-grid_c0">
+                            <!-- <th id="user-grid_c0">
                                 <a class="sort-link" href="<?php echo $uri; ?>">ลำดับรายรับ</a>
-                            </th>
+                            </th> -->
                             <th id="user-grid_c0">
                                 <a class="sort-link" href="<?php echo $uri; ?>">หมวดหมู่รายรับ</a>
                             </th>
-<!--                            <th id="user-grid_c1">
-                                <a class="sort-link" href="<?php echo $uri; ?>">รหัส</a>
-                            </th>-->
+                           <th id="user-grid_c1">
+                                <a class="sort-link" href="<?php echo $uri; ?>">วันที่เพิ่ม</a>
+                            </th>
 <!--                            <th id="user-grid_c4">
                                 <a class="sort-link" href="<?php echo $uri; ?>">วันเวลาที่ร้าง</a>
                             </th>-->
@@ -117,11 +117,12 @@ require 'template/back/header.php';
                             $tr = ($i % 2 == 0) ? "odd" : "even";
                             ?>
                             <tr class="<?php echo $tr; ?>">
-                                <td>
-                                    <a class="load_data" href="<?php echo $baseUrl; ?>/back/incomeCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['id']; ?></a>
-                                </td>
+                                
                                 <td>
                                     <a class="load_data" href="<?php echo $baseUrl; ?>/back/incomeCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['name']; ?></a>
+                                </td>
+                                <td>
+                                    <a class="load_data" href="<?php echo $baseUrl; ?>/back/incomeCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['created']; ?></a>
                                 </td>
                                 <!--<td><?php echo $rs_pc['codename']; ?></td>-->
   <!--                              <td><?php echo thaidate($rs_pc['created']); ?></td>-->
