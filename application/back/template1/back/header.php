@@ -12,16 +12,6 @@
         <script type="text/javascript" src="<?php echo $baseUrl; ?>/js/loading.js"></script>
         <title><?php echo $title; ?></title>
     </head>
-<?php
-    $db = new database();
-    $option_user = array(
-        "table" => "users",
-        "condition" => "id='{$_GET['id']}'"
-    );
-    $query_user = $db->select($option_user);
-    $rs_user = $db->get($query_user);
-    
-?>
     <body>
         <div id="warpper">
             <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#33638c; role="navigation">
@@ -30,7 +20,7 @@
                 </div>
                                                                       
                 <ul class="nav navbar-top-links navbar-right">
-                    <a><?php echo $rs_user['username']; ?></a>
+                    <a><?php echo  $_SESSION[_ss . 'email']; ?></a>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                             <i class="glyphicon glyphicon-user"></i> <span class="caret"></span>
@@ -62,7 +52,10 @@
                                 <a href="<?php echo $baseUrl; ?>/itoffside-admin"><i class="glyphicon glyphicon-home"></i> หน้าแรก</a>
                             </li>
                             <li>
-                                <a href="<?php echo $baseUrl; ?>/back/user"><i class="glyphicon glyphicon-user"></i> ผู้ใช้ (สมาชิก)</a>
+                                <a href="<?php echo $baseUrl; ?>/back/memberApp"><i class="glyphicon glyphicon-user"></i> ผู้ใช้งานแอพพลิเคชัน</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $baseUrl; ?>/back/user"><i class="glyphicon glyphicon-user"></i> ผู้ใช้ (ผู้ดูแลระบบ)</a>
                             </li>
                             <li>
                                 <a href="<?php echo $baseUrl; ?>/back/incomeCategorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายรับ</a>
@@ -74,21 +67,7 @@
                                 <a href="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายรายวัน</a>
                             </li>
                             
-<!--                            <li>
-                                <a href="<?php echo $baseUrl; ?>/back/product"><i class="glyphicon glyphicon-book"></i> สินค้า</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $baseUrl; ?>/back/order"><i class="glyphicon glyphicon-align-justify"></i> รายการสั่งซื้อ</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $baseUrl; ?>/back/howtopay"><i class="glyphicon glyphicon-folder-open"></i> วิธีการสั่งซื้อ</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $baseUrl; ?>/back/aboutus"><i class="glyphicon glyphicon-hdd"></i> เกี่ยวกับเรา</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $baseUrl; ?>"><i class="glyphicon glyphicon-share-alt"></i> กลับไปเว็บไซต์</a>
-                            </li>-->
+
                         </ul>
                     </div>
                 </div>

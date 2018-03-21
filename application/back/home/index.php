@@ -3,11 +3,11 @@
  * php code///////////**********************************************************
  */
 $title = 'ระบบจัดการข้อมูลแอปพลเคชัน';
-$db = new database();
-$option_user = array(
-    "table" => "users"
-);
-$query_user = $db->select($option_user);
+// $db = new database();
+// $option_user = array(
+//     "table" => "users"
+// );
+// $query_user = $db->select($option_user);
 
 /*
  * php code///////////**********************************************************
@@ -16,7 +16,7 @@ $query_user = $db->select($option_user);
 /*
  * header***********************************************************************
  */
-require 'application/back/template/back/header.php';
+require 'template/back/header.php';
 /*
  * header***********************************************************************
  */
