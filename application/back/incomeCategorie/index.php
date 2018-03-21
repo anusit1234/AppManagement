@@ -90,6 +90,7 @@ require 'template/back/header.php';
                     </div>
                 </form>
             </div><!-- search-form -->
+            
             <div id="user-grid" class="table table-striped table-bordered">
                 <!-- <div class="summary">หน้า <?php echo $page;?> จากทั้งหมด <?php echo $pages; ?> หน้า</div> -->
                 <table class="table table-striped table-custom">

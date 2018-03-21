@@ -16,11 +16,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $query_pw = $db->update("users", $value_pw, "id='{$_POST['id']}'");
 
         if ($query_pw == TRUE) {
-            header("location:" . $baseUrl . "/back/user");
+            echo "<script>";
+            // header("location:" . $baseUrl . "/back/alert2");
+            echo "alert('เปลี่ยนรหัสผ่านสำเร็จ');";
+            echo "window.location='$baseUrl/back/user'";
+            echo "</script>";
         }
     }else{
         $_SESSION[_ss . 'msg_result'] = TRUE;
-        header("location:" . $baseUrl . "/back/user/changepassword");
+        // header("location:" . $baseUrl . "/back/user/changepassword");
+        echo "<script>";
+            // header("location:" . $baseUrl . "/back/alert2");
+            echo "alert('รหัสผ่านเก่าไม่ถูกต้อง');";
+            echo "window.location='$baseUrl/back/user/changepassword'";
+            echo "</script>";
     }
     
 }

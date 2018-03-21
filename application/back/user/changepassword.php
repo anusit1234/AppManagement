@@ -10,15 +10,16 @@ if (isset($_SESSION[_ss . 'msg_result'])) {
 }
 
 $db = new database();
+$user_id = $_SESSION[_ss . 'id'];
 $option_user = array(
     "table" => "users",
-    "condition" => "id='1'"
+    "condition" => "id='$user_id'"
 );
 $query_user = $db->select($option_user);
 $rs_user = $db->get($query_user);
 
 
-$title = 'เปลี่ยนรหัสผ่าน : ' . $rs_user['username'];
+$title = 'เปลี่ยนรหัสผ่าน : ' . $rs_user['email'];
 /*
  * php code///////////**********************************************************
  */
@@ -35,9 +36,9 @@ require 'template/back/header.php';
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">เปลี่ยนรหัสผ่าน <?php echo $rs_user['username']; ?></h1>
+            <h1 class="page-header"><font size="5">เปลี่ยนรหัสผ่าน <?php echo $rs_user['email']; ?></font></h1>
         </div>
-        <?php if ($msg_result == true) { ?>
+        <!-- <?php if ($msg_result == true) { ?>
             <div class="col-lg-12">
                 <div class="alert alert-danger" role="alert">
                     <button type="button" class="close" data-dismiss="alert">
@@ -47,7 +48,7 @@ require 'template/back/header.php';
                     รหัสผ่านเก่าไม่ถูกต้อง!
                 </div>
             </div>
-        <?php } ?>
+        <?php } ?> -->
     </div>
     
     <div class="row">
@@ -56,9 +57,9 @@ require 'template/back/header.php';
                 <form id="user-form" action="<?php echo $baseUrl; ?>/back/user/form_changepassword/<?php echo $rs_user['id']; ?>" method="post">
                     <input type="hidden" name="id" value="<?php echo $rs_user['id']; ?>">
                     <div class="form-group">
-                        <label class="col-sm-2 control-label required" for="User_username">Username</label>
+                        <label class="col-sm-2 control-label required" for="User_username">อีเมล</label>
                         <div class="col-sm-4">
-                            <input class="form-control input-sm" readonly="" maxlength="50" name="username" id="username" type="text" value="<?php echo $rs_user['username']; ?>" />
+                            <input class="form-control input-sm" readonly="" maxlength="50" name="username" id="username" type="text" placeholder="<?php echo $rs_user['email']; ?>" value="<?php echo $rs_user['email']; ?>" />
                         </div>
                     </div>
                     <div class="form-group">

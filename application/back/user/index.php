@@ -103,7 +103,7 @@ require 'template/back/header.php';
                             <th id="user-grid_c1">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=surname">นามสกุล</a>
                             </th>
-                            <th id="user-grid_c3">
+                            <th id="user-grid_c2">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=email">email</a>
                             </th>
                             <th id="user-grid_c2">
@@ -112,9 +112,9 @@ require 'template/back/header.php';
                             <th id="user-grid_c3">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=sex">เพศ</a>
                             </th>
-                            <th id="user-grid_c3">
+                            <!-- <th id="user-grid_c3">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=career">อาชีพ</a>
-                            </th>
+                            </th> -->
                             <th id="user-grid_c4">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=permission">สิทธิ์ผู้ใช้</a>
                             </th>
@@ -136,7 +136,7 @@ require 'template/back/header.php';
                                 <td><?php echo $rs_user['email']; ?></td>
                                 <td><?php echo $rs_user['age']; ?></td>
                                 <td><?php echo $rs_user['sex']; ?></td>
-                                <td><?php echo $rs_user['career']; ?></td>
+                                <!-- <td><?php echo $rs_user['career']; ?></td> -->
                                 <td><?php if($rs_user['permission']=="admin"){echo"ผู้ดูแลระบบ";}else{echo"สมาชิก";}; ?></td>
                                 <td class="button-column">
                                     <!--<a class="btn btn-info btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/user/<?php echo $rs_user['id']; ?>"><i class="glyphicon glyphicon-zoom-in"></i> รายละเอียด</a>-->

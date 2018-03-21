@@ -175,19 +175,22 @@ require 'template/back/header.php';
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label" for="User_permission">สิทธิ์การใช้งาน</label>
-                        <div class="col-sm-5">
+                        <!-- <label class="col-sm-2 control-label" for="User_permission">สิทธิ์การใช้งาน</label> -->
+                        <!-- <div class="col-sm-5">
                         <table width="479">
                             <tr>
                                 <td><select class="form-control input-sm" name="permission" id="permission" required>
                                 <!-- <option value="" >--เลือก--</option> -->
-                                <!-- <option value="member">สมาชิก</option> -->
+                                <!-- <option value="member">สมาชิก</option>
                                 <option value="admin">ผู้ดูแลระบบ</option></td>
                             <td><font color="red">&nbsp;<b>*</b></font></td>
                             </tr>
                             </select>
                             
                         </table>
+                        </div> -->
+                        <div class="col-sm-4">
+                            <input class="form-control input-sm" maxlength="100" name="permission" id="permission" type="hidden" value="admin" />
                         </div>
                     </div>
                 

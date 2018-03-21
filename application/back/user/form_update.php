@@ -7,8 +7,9 @@ $value_user = array(
     "password" => trim($_POST['password']),
     "age" => trim($_POST['age']),
     "sex" => trim($_POST['sex']),
-    "career" => trim($_POST['career']),
-    "permission" => trim($_POST['permission'])
+    // "career" => trim($_POST['career']),
+    "permission" => trim($_POST['permission']),
+    "created" => date('Y-m-d')
 );
 $con_user = "id='{$_GET['id']}'";
 $query_user = $db->update("users", $value_user, $con_user);

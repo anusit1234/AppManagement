@@ -4,7 +4,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $db = new database();
     $value_pc = array(
-        "name" => trim($_POST['name'])
+        "name" => trim($_POST['name']),
+        "created" => date('Y-m-d')
     );
     $query_pc = $db->update("fixed_expenses_categories", $value_pc, "id='{$_POST['id']}'");
 

@@ -13,7 +13,7 @@ $query_user = $db->select($option_user);
 $rs_user = $db->get($query_user);
 
 
-$title = 'แก้ไขผู้ใช้งาน : ' . $rs_user['username'];
+$title = 'แก้ไขผู้ใช้งาน : ' . $rs_user['name']  . $rs_user['surname'];
 /*
  * php code///////////**********************************************************
  */
@@ -78,9 +78,9 @@ require 'template/back/header.php';
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="User_permission">สิทธิ์การใช้งาน</label>
                         <div class="col-sm-4">
-                            <input class="form-control input-sm" maxlength="100" name="permission" id="permission" type="hidden" value="<?php echo $rs_user['permission'];?>" />
+                            <input class="form-control input-sm"  maxlength="100" name="permission" id="permission" type="hidden" value="<?php echo $rs_user['permission'];?>" />
 
-                            <p class="form-control input-sm"  ><i><?php if($rs_user['permission']=="member"){echo"สมาชิก";}else{echo"ผู้ดูแลระบบ";}?></i></p>
+                            <p class="form-control input-sm"  readonly=""><i><?php if($rs_user['permission']=="member"){echo"สมาชิก";}else{echo"ผู้ดูแลระบบ";}?></i></p>
 
                             <!-- <select class="form-control input-sm" name="permission" id="permission">
                                 <option value="<?php echo $rs_user['permission'];?>" ><?php if($rs_user['permission']=="member"){echo"สมาชิก";}else{echo"ผู้ดูแลระบบ";}?></option>
