@@ -27,7 +27,7 @@ require 'template/back/header.php';
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">แก้ไขข้อมูล <?php echo $rs_pc['name']; ?></h1>
+            <h1 class="page-header"><font size="5">แก้ไขข้อมูล <?php echo $rs_pc['name']; ?></font></h1>
         </div>
     </div>
     <form id="product-form" action="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie/form_update" method="post">

@@ -72,13 +72,13 @@ require 'template/back/header.php';
                     <div class="form-group">
                         <label class="col-sm-2 control-label">รหัสผ่านใหม่</label>
                         <div class="col-sm-4">
-                            <input class="form-control input-sm" name="pass_confirmation" type="password" required />
+                            <input class="form-control input-sm" minlength="8" name="pass_confirmation" type="password" required />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">รหัสผ่านใหม่อีกครั้ง</label>
                         <div class="col-sm-4">
-                            <input class="form-control input-sm" name="password" id="password" type="password" required />
+                            <input class="form-control input-sm" minlength="8" name="password" id="password" type="password" required />
                         </div>
                     </div>    
             </div>

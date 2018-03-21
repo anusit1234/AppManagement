@@ -103,6 +103,7 @@ require 'template/back/header.php';
                 </form>
             </div><!-- search-form -->
             <div id="user-grid" class="grid-view">
+            
                 <table class="table table-striped table-custom">
                     <thead>
                         <tr>
