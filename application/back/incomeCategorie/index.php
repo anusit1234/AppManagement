@@ -103,7 +103,7 @@ require 'template/back/header.php';
                                 <a class="sort-link" href="<?php echo $uri; ?>">หมวดหมู่รายรับ</a>
                             </th>
                            <th id="user-grid_c1">
-                                <a class="sort-link" href="<?php echo $uri; ?>">วันที่เพิ่ม</a>
+                                <a class="sort-link" href="<?php echo $uri; ?>">วันที่เพิ่ม/แก้ไข</a>
                             </th>
 <!--                            <th id="user-grid_c4">
                                 <a class="sort-link" href="<?php echo $uri; ?>">วันเวลาที่ร้าง</a>
@@ -122,9 +122,7 @@ require 'template/back/header.php';
                                 <td>
                                     <a class="load_data" href="<?php echo $baseUrl; ?>/back/incomeCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['name']; ?></a>
                                 </td>
-                                <td>
-                                    <a class="load_data" href="<?php echo $baseUrl; ?>/back/incomeCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['created']; ?></a>
-                                </td>
+                                <td><?php echo date("d/m/Y", strtotime($rs_pc['created']));?></td>
                                 <!--<td><?php echo $rs_pc['codename']; ?></td>-->
   <!--                              <td><?php echo thaidate($rs_pc['created']); ?></td>-->
                                 <td class="button-column">

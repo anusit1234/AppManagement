@@ -56,12 +56,12 @@ require 'template/back/header.php';
         <div class="col-lg-8">
             <div class="submit">
                 <input role="button" id="save" type="submit"  class="btn btn-success btn-xs new-data" href="#" value="บันทึก"class="glyphicon glyphicon-floppy-save">
-                    
+                <i class="glyphicon glyphicon-floppy-save"></i>
                 
 
                 <a role="button" class="search-button btn btn-default btn-xs" href="<?php echo $baseUrl; ?>/back/fixedExpensesCategorie">
-                    <i class="glyphicon glyphicon-remove-circle"></i>
-                    ยกเลิก
+                <i class="glyphicon glyphicon-remove-circle"></i>
+                ยกเลิก
                 </a>
             </div>
             <!--<input class="submit" id="save" type="submit" value="Submit">-->

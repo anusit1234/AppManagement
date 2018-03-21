@@ -78,7 +78,7 @@ require 'template/back/header.php';
                                 <input size="60" maxlength="100" class="form-control input-sm" name="surname" id="surname" type="text" />        </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label">นามสกุล</label>
+                            <label for="email" class="col-sm-2 control-label">อีเมล</label>
                             <div class="col-sm-4">
                                 <input size="60" maxlength="100" class="form-control input-sm" name="email" id="email" type="text" />        </div>
                         </div>
@@ -146,14 +146,18 @@ require 'template/back/header.php';
                                 <!-- <td>
                                     <a class="load_data" href="<?php echo $baseUrl; ?>/back/user/<?php echo $rs_user['id']; ?>"><?php echo $rs_user['email']; ?></a>
                                 </td> -->
-                                <td><?php echo $rs_user['name']; ?></td>
+                                <td>
+                                    <a class="load_data" href="<?php echo $baseUrl; ?>/back/user/update/<?php echo $rs_user['id']; ?>"><?php echo $rs_user['name']; ?></a>
+                                </td>
+                                <!-- <td><?php echo $rs_user['name']; ?></td> -->
                                 <td><?php echo $rs_user['surname']; ?></td>
                                 <td><?php echo $rs_user['email']; ?></td>
                                 <td><?php echo $rs_user['age']; ?></td>
                                 <td><?php echo $rs_user['sex']; ?></td>
                                 <!-- <td><?php echo $rs_user['career']; ?></td> -->
                                 <td><?php if($rs_user['permission']=="admin"){echo"ผู้ดูแลระบบ";}else{echo"สมาชิก";}; ?></td>
-                                <td><?php echo $rs_user['created']; ?></td>
+                                <td><?php echo date("d/m/Y", strtotime($rs_user['created']));?></td>
+
                                 <td class="button-column">
                                     <!--<a class="btn btn-info btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/user/<?php echo $rs_user['id']; ?>"><i class="glyphicon glyphicon-zoom-in"></i> รายละเอียด</a>-->
                                     <a class="btn btn-warning btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/user/update/<?php echo $rs_user['id']; ?>"><i class="glyphicon glyphicon-edit"></i> แก้ไข</a>
