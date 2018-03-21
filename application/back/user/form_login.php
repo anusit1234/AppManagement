@@ -18,7 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('location:'.$baseUrl.'/back/home/index');
         
     }else{
-        header('location:'.$baseUrl);
+        // header('location:'.$baseUrl);
+        echo "<script>";
+            // header("location:" . $baseUrl . "/back/alert2");
+        echo "alert('ข้อมูลไม่ถูกต้อง กรุณากรอกใหม่อีกครั้ง');";
+        echo "window.location='$baseUrl'";
+        echo "</script>";
     }
     
 }
