@@ -5,10 +5,10 @@ header("Content-Type: application/json; charset=UTF-8");
 $db = new database();
 
 // $id = 3 ;
-$username = $_GET['username'];
+$email = $_GET['email'];
 $password = $_GET['password'];
     
-$sql = "SELECT * FROM users where username='$username' and password='$password' ";
+$sql = "SELECT * FROM users where email='$email' and password='$password' and permission='member'";
 
 $query = $db->query($sql);
 
