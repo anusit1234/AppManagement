@@ -29,7 +29,6 @@ require 'template/back/header.php';
  * header***********************************************************************
  */
 ?>
-
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
@@ -102,7 +101,7 @@ require 'template/back/header.php';
                     </div>
                 </form>
             </div><!-- search-form -->
-            <div id="user-grid" class="grid-view">
+            <div id="user-grid" class="table table-striped table-bordered">
             
                 <table class="table table-striped table-custom">
                     <thead>

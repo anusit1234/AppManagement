@@ -120,8 +120,17 @@ require 'template/back/header.php';
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="User_sex">เพศ</label>
-                        <div class="col-sm-4">
-                            <input class="form-control input-sm" maxlength="20" name="sex" id="sex" type="text" value="<?php echo $rs_user['sex'];?>" required/>
+                        <div class="col-sm-5">
+                        <table width="385">
+                            <tr>
+                                <td><select class="form-control input-sm" name="sex" id="sex" required>
+                                <option value="<?php echo $rs_user['sex'];?>"><?php echo $rs_user['sex'];?></option>
+                                <option value="ชาย">ชาย</option>
+                                <option value="หญิง">หญิง</option></td>
+                                
+                            </tr>
+                                </select>
+                        </table>
                         </div>
                     </div>
                     

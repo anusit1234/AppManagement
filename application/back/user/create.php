@@ -21,7 +21,7 @@ require 'template/back/header.php';
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">เพิ่มผู้ใช้งาน</h1>
+            <h1 class="page-header"><font size="5">เพิ่มผู้ใช้งาน (ผู้ดูแลระบบ)</font></h1>
         </div>
     </div>
     <form  id="user-form" action="<?php echo $baseUrl; ?>/back/user/form_create" method="post" >

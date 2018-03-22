@@ -21,7 +21,7 @@ require 'template/back/header.php';
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">เพิ่มหมวดหมู่รายจ่ายรายวัน</h1>
+            <h1 class="page-header"><font size="5">เพิ่มหมวดหมู่รายจ่ายรายวัน</font></h1>
         </div>
     </div>
     <form id="product-form" action="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie/form_create" method="post">

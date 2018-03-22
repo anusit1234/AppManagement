@@ -25,7 +25,7 @@ require 'template/back/header.php';
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">เพิ่มหมวดหมู่รายรับ</h1>
+            <h1 class="page-header"><font size="5">เพิ่มหมวดหมู่รายรับ</font></h1>
             
         </div>
     </div>
@@ -35,9 +35,14 @@ require 'template/back/header.php';
             <div class="form-horizontal" style="margin-top: 10px;">
                 
                     <div class="form-group">
-                        <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดหมู่รายรับ <span class="required">*</span></label>
+                        <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดหมู่รายรับ <span class="required"></span></label>
                         <div class="col-sm-4">
-                            <input id="name" name="name" class="form-control input-sm" minlength="2" type="text" required>
+                        <table width="420">
+                            <tr>
+                                <td><input placeholder="กรอกชื่อหมวดหมู่รายรับ" id="name" name="name" class="form-control input-sm" minlength="2" type="text" required></td>
+                                <td><font color="red">&nbsp;<b>*</b></font></td>
+                            </tr>
+                        </table>
                         </div>
                     </div>
 <!--                    <div class="form-group">
