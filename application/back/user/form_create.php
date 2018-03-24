@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $db = new database();
     $email = $_REQUEST["email"];
-    $sql = "SELECT name FROM users where email='$email' ";
+    $sql = "SELECT name FROM users where email='$email' and permission='member'";
     $query = $db->query($sql);
     $rows = $db->rows($query);
 

@@ -22,11 +22,8 @@ if($num > 0){
     }
     echo json_encode($arr[0]);
 }
-else{
-    echo json_encode(null);
-}
-    
-    
-
+// else{
+//      echo null;
+// }
 
 ?>
