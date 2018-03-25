@@ -8,9 +8,9 @@ $db = new database();
 $id = $_GET['user_id'];
 
 //ดึงข้อมูลรายการรายรับทั้งหมด
-$sql = "SELECT t2.name as category, t1.amount, t1.create_date
+$sql = "SELECT t2.name as category, t1.amount, t1.created
             FROM income t1 inner join income_categories t2 on t1.income_cate_id = t2.id
-            WHERE t1.user_id = '$id' order by t1.create_date DESC
+            WHERE t1.user_id = '$id' order by t1.created DESC
             ";
 
 $query = $db->query($sql);

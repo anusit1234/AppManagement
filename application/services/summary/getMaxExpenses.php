@@ -12,7 +12,7 @@ $sql = "SELECT
             t2.name as cateName,
             t3.name as catePay,
             t1.amount as amount,
-            t1.create_date as createDate
+            t1.created as createDate
         FROM
             daily_expenses t1
         INNER JOIN daily_expenses_categories t2 ON
