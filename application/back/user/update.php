@@ -144,12 +144,12 @@ require 'template/back/header.php';
                         </div>
                     </div>
                     
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="col-sm-2 control-label" for="User_career">อาชีพ</label>
                         <div class="col-sm-4">
                             <input class="form-control input-sm" maxlength="100" name="career" id="career" type="text" value="<?php echo $rs_user['career'];?>" required/>
                         </div>
-                    </div>
+                    </div> -->
                     
                     
 

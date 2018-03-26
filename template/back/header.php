@@ -64,7 +64,7 @@
                                 <a href="<?php echo $baseUrl; ?>/back/fixedExpensesCategorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายจ่ายคงที่</a>
                             </li>
                             <li>
-                                <a href="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายรายวัน</a>
+                                <a href="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายจ่ายรายวัน</a>
                             </li>
                             
 

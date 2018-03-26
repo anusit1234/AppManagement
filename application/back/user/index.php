@@ -131,7 +131,7 @@ require 'template/back/header.php';
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=permission">สิทธิ์ผู้ใช้</a>
                             </th>
                             <th id="user-grid_c4">
-                                <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=created">วันที่เพิ่ม</a>
+                                <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=created">วันที่เพิ่ม/แก้ไข</a>
                             </th>
                             <th class="button-column" id="user-grid_c6">&nbsp;</th>
                         </tr>

@@ -162,7 +162,7 @@ require 'template/back/header.php';
                         </div>
                     </div>
                     
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="col-sm-2 control-label" for="User_career">อาชีพ</label>
                         <div class="col-sm-4">
                         <table width="460">
@@ -172,7 +172,7 @@ require 'template/back/header.php';
                             </tr>
                         </table>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <!-- <label class="col-sm-2 control-label" for="User_permission">สิทธิ์การใช้งาน</label> -->
