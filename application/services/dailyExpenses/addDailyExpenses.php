@@ -27,7 +27,7 @@ $created = $objData->data->created;
     // else{
         $value_due_date = array(
             "user_id" => $user_id,
-            "fix_expenses_cate_id" => $fix_expenses_cate_id,
+            "daily_expenses_cate_id" => $daily_expenses_cate_id,
             "payment_channel_id" => $payment_channel_id,
             "amount" => $amount,
             "images" => $images,
