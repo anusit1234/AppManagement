@@ -134,24 +134,24 @@ $(document).ready(function() {
 <table border="1" bordercolor="#DCDCDC" width="100%">
 <!-- <body bg color="#00000"> -->
     <tr>
-        <td bgcolor="#d5d5db" align="center">
+        <td bgcolor="#7daed8" align="center">
                     <ul  class="nav"  >
                         <li>
-                           <a href="<?php echo $baseUrl; ?>/back/income_categories"><font color="#346289"><i class="glyphicon glyphicon-list-alt"></i>  หมวดหมู่รายรับ</font></a>
+                           <a href="<?php echo $baseUrl; ?>/back/income_categories"><font color="#000000"><i class="glyphicon glyphicon-list-alt"></i>  หมวดหมู่รายรับ</font></a>
                         </li>
                     </ul>
         </td>
-        <td bgcolor="#d5d5db" align="center">
+        <td bgcolor="#7daed8" align="center">
                     <ul id="side-menu" class="nav" >
                         <li class="dropdown">
-                            <a href="<?php echo $baseUrl; ?>/back/fixed_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#346289">หมวดหมู่รายจ่ายคงที่</font></a>
+                            <a href="<?php echo $baseUrl; ?>/back/fixed_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#000000">หมวดหมู่รายจ่ายคงที่</font></a>
                         </li>
                     </ul>
         </td>
-        <td bgcolor="#d5d5db" align="center">
+        <td bgcolor="#7daed8" align="center">
                     <ul id="side-menu" class="nav" >
                         <li class="dropdown">
-                            <a href="<?php echo $baseUrl; ?>/back/daily_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#346289">หมวดหมู่รายจ่ายรายวัน</font></a>
+                            <a href="<?php echo $baseUrl; ?>/back/daily_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#000000">หมวดหมู่รายจ่ายรายวัน</font></a>
                         </li>
                     </ul>
         </td>

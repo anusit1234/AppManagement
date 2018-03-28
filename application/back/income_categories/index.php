@@ -88,11 +88,11 @@ $(document).ready(function() {
                                 </select>
                     </div>
                 </div>
-                    <br>
+                    
                 <div class="form-group">
                     <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดหมู่ <span class="required"></span></label>
                         <div class="col-sm-4">
-                            <input placeholder="กรอกชื่อหมวดหมู่รายจ่ายคงที่" id="name" name="name" class="form-control input-sm" minlength="4" type="text" required>
+                            <input placeholder="กรอกชื่อหมวดหมู่" id="name" name="name" class="form-control input-sm" minlength="4" type="text" required>
                         </div>
                 </div>
                 <div class="form-group" id="status">
@@ -198,7 +198,7 @@ $(document).ready(function() {
                 <!-- <div class="summary">หน้า <?php echo $page;?> จากทั้งหมด <?php echo $pages; ?> หน้า</div> -->
                 <table class="table table-striped table-custom">
                     <thead>
-                        <tr bgcolor="#f3f3fa">
+                        <tr bgcolor="#E6E6FA">
                             <!-- <th id="user-grid_c0">
                                 <a class="sort-link" href="<?php echo $uri; ?>">ลำดับรายรับ</a>
                             </th> -->
