@@ -89,11 +89,11 @@ $(document).ready(function() {
                                         </select>
                         </div>
                     </div>
-                        <br>
+                        
                     <div class="form-group">
                         <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดหมู่ <span class="required"></span></label>
                             <div class="col-sm-4">
-                                <input placeholder="กรอกชื่อหมวดหมู่รายจ่ายคงที่" id="name" name="name" class="form-control input-sm" minlength="4" type="text" required>
+                                <input placeholder="กรอกชื่อหมวดหมู่" id="name" name="name" class="form-control input-sm" minlength="4" type="text" required>
                             </div>
                     </div>
                     <div class="form-group" id="status">
@@ -131,24 +131,24 @@ $(document).ready(function() {
 <table border="1" bordercolor="#DCDCDC" width="100%">
 <!-- <body bg color="#00000"> -->
     <tr>
-        <td bgcolor="#dfdff6" align="center">
+        <td bgcolor="#7daed8" align="center">
                     <ul  class="nav" >
                         <li>
-                           <a href="<?php echo $baseUrl; ?>/back/income_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายรับ</font></a>
+                           <a href="<?php echo $baseUrl; ?>/back/income_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#000000">หมวดหมู่รายรับ</font></a>
                         </li>
                     </ul>
         </td>
-        <td bgcolor="#dfdff6" align="center">
+        <td bgcolor="#7daed8" align="center">
                     <ul id="side-menu" class="nav" >
                         <li class="dropdown">
-                            <a href="<?php echo $baseUrl; ?>/back/fixed_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายจ่ายคงที่</font></a>
+                            <a href="<?php echo $baseUrl; ?>/back/fixed_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#000000">หมวดหมู่รายจ่ายคงที่</font></a>
                         </li>
                     </ul>
         </td>
-        <td bgcolor="#dfdff6" align="center">
+        <td bgcolor="#7daed8" align="center">
                     <ul id="side-menu" class="nav" >
                         <li class="dropdown">
-                            <a href="<?php echo $baseUrl; ?>/back/daily_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายจ่ายรายวัน</font></a>
+                            <a href="<?php echo $baseUrl; ?>/back/daily_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#000000">หมวดหมู่รายจ่ายรายวัน</font></a>
                         </li>
                     </ul>
         </td>
@@ -199,7 +199,7 @@ $(document).ready(function() {
                 <!-- <div class="summary">หน้า <?php echo $page;?> จากทั้งหมด <?php echo $pages; ?> หน้า</div> -->
                 <table class="table table-striped table-custom">
                     <thead>
-                        <tr bgcolor="#f3f3fa">
+                        <tr bgcolor="#E6E6FA">
                             
                             <th id="user-grid_c4">
                                 <a class="sort-link" href="<?php echo $uri; ?>">หมวดหมู่รายจ่ายคงที่</a>
