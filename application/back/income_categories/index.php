@@ -128,21 +128,21 @@ $(document).ready(function() {
 <table border="1" bordercolor="#DCDCDC" width="100%">
 <!-- <body bg color="#00000"> -->
     <tr>
-        <td bgcolor="#4a7eab" align="center">
+        <td bgcolor="#dfdff6" align="center">
                     <ul  class="nav" >
                         <li>
                            <a href="<?php echo $baseUrl; ?>/back/income_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายรับ</font></a>
                         </li>
                     </ul>
         </td>
-        <td bgcolor="#4a7eab" align="center">
+        <td bgcolor="#dfdff6" align="center">
                     <ul id="side-menu" class="nav" >
                         <li class="dropdown">
                             <a href="<?php echo $baseUrl; ?>/back/fixed_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายจ่ายคงที่</font></a>
                         </li>
                     </ul>
         </td>
-        <td bgcolor="#4a7eab" align="center">
+        <td bgcolor="#dfdff6" align="center">
                     <ul id="side-menu" class="nav" >
                         <li class="dropdown">
                             <a href="<?php echo $baseUrl; ?>/back/daily_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายจ่ายรายวัน</font></a>
@@ -198,7 +198,7 @@ $(document).ready(function() {
                 <!-- <div class="summary">หน้า <?php echo $page;?> จากทั้งหมด <?php echo $pages; ?> หน้า</div> -->
                 <table class="table table-striped table-custom">
                     <thead>
-                        <tr bgcolor="#E6E6FA">
+                        <tr bgcolor="#f3f3fa">
                             <!-- <th id="user-grid_c0">
                                 <a class="sort-link" href="<?php echo $uri; ?>">ลำดับรายรับ</a>
                             </th> -->
