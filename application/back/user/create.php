@@ -65,7 +65,7 @@ require 'template/back/header.php';
                         <div class="col-sm-4">
                         <table width="460">
                             <tr>
-                                <td><input placeholder="กรอกข้อมูลอีเมล์ ตัวอย่าง test@example.com" class="form-control input-sm" maxlength="200" name="email" id="email" type="email" required></td>
+                                <td><input placeholder="test@example.com" class="form-control input-sm" maxlength="200" name="email" id="email" type="email" required></td>
                                 <td><font color="red">&nbsp;<b>*</b></font></td>
                             </tr>
                         </table>
@@ -76,7 +76,7 @@ require 'template/back/header.php';
                         <div class="col-sm-4">
                         <table width="460">
                             <tr>
-                                <td><input  placeholder="กรอกรหัสผ่านไม่ต่ำกว่า 8 ตัวอักษร" class="form-control input-sm" minlength="8" maxlength="20" name="password" id="password" type="password" required></td>
+                                <td><input  placeholder=" A-Z,a-z,0-9 ไม่ต่ำกว่า 8 ตัวอักษร" class="form-control input-sm" pattern="[a-zA-Z0-9.-_*#@$%!]{1,}" minlength="8" maxlength="20" name="password" id="password" type="password" required></td>
                                 <td><font color="red">&nbsp;<b>*</b></font></td>
                             </tr>
                         </table>
