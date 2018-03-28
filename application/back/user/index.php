@@ -105,7 +105,7 @@ require 'template/back/header.php';
             
                 <table class="table table-striped table-custom">
                     <thead>
-                        <tr>
+                        <tr bgcolor="#E6E6FA">
                             <!-- <th id="user-grid_c0">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=username">Username</a>
                             </th> -->
@@ -115,22 +115,22 @@ require 'template/back/header.php';
                             <th id="user-grid_c1">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=surname">นามสกุล</a>
                             </th>
-                            <th id="user-grid_c2">
+                            <th id="user-grid_c1">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=email">email</a>
                             </th>
                             <th id="user-grid_c1">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=age">อายุ</a>
                             </th>
-                            <th id="user-grid_c3">
+                            <th id="user-grid_c1">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=sex">เพศ</a>
                             </th>
                             <!-- <th id="user-grid_c3">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=career">อาชีพ</a>
                             </th> -->
-                            <th id="user-grid_c4">
+                            <th id="user-grid_c1">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=permission">สิทธิ์ผู้ใช้</a>
                             </th>
-                            <th id="user-grid_c4">
+                            <th id="user-grid_c1">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=created">วันที่เพิ่ม/แก้ไข</a>
                             </th>
                             <th class="button-column" id="user-grid_c6">&nbsp;</th>

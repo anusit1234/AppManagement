@@ -57,14 +57,17 @@
                             <li>
                                 <a href="<?php echo $baseUrl; ?>/back/user"><i class="glyphicon glyphicon-user"></i> ผู้ใช้ (ผู้ดูแลระบบ)</a>
                             </li>
-                            <li>
-                                <a href="<?php echo $baseUrl; ?>/back/incomeCategorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายรับ</a>
+                            <!-- <li>
+                                <a href="<?php echo $baseUrl; ?>/back/income_categories"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายรับ</a>
                             </li>
                             <li>
-                                <a href="<?php echo $baseUrl; ?>/back/fixedExpensesCategorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายจ่ายคงที่</a>
+                                <a href="<?php echo $baseUrl; ?>/back/fixed_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายจ่ายคงที่</a>
                             </li>
                             <li>
-                                <a href="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายจ่ายรายวัน</a>
+                                <a href="<?php echo $baseUrl; ?>/back/daily_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่รายจ่ายรายวัน</a>
+                            </li> -->
+                            <li>
+                                <a href="<?php echo $baseUrl; ?>/back/categorie"><i class="glyphicon glyphicon-list-alt"></i> หมวดหมู่</a>
                             </li>
                             
 
@@ -72,3 +75,5 @@
                     </div>
                 </div>
             </nav>
+        </body>
+    </html>

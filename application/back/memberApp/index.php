@@ -116,7 +116,7 @@ require 'template/back/header.php';
             <div id="user-grid" class="table table-striped table-bordered">
                 <table class="table table-striped table-custom">
                     <thead>
-                        <tr>
+                        <tr bgcolor="#E6E6FA">
                             <!-- <th id="user-grid_c0">
                                 <a class="sort-link" href="<?php echo $baseUrl; ?>/back/user/index?User_sort=username">Username</a>
                             </th> -->

@@ -22,7 +22,9 @@ require 'template/back/header.php';
 /*
  * header***********************************************************************
  */
+
 ?>
+
 <script type="text/javascript" src="<?php echo $baseUrl; ?>/js/jquery.form-validator.min.js"></script>
 <div id="page-warpper">
     <div class="row">
@@ -30,7 +32,7 @@ require 'template/back/header.php';
             <h1 class="page-header"><font size="5">แก้ไขข้อมูล <?php echo $rs_pc['name']; ?></font></h1>
         </div>
     </div>
-    <form id="product-form" action="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie/form_update" method="post">
+    <form id="product-form" action="<?php echo $baseUrl; ?>/back/daily_expenses_categories/form_update" method="post">
     <div class="row">
         <div class="col-lg-12">
             <div class="form-horizontal" style="margin-top: 10px;">
@@ -46,7 +48,7 @@ require 'template/back/header.php';
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="User_ststus">สถานะ</label>
                         <div class="col-sm-4">
-                            <select class="form-control input-sm" name="status" id="status" required>
+                            <select class="form-control input-sm" name="status" id="status">
                                 <option value="<?php echo $rs_pc['status'];?>" ><?php if($rs_pc['status']=="1"){echo"จำเป็น";}else{echo"ไม่จำเป็น";}?></option>
                                 <option value="1">จำเป็น</option>
                                 <option value="0">ไม่จำเป็น</option>
@@ -69,7 +71,7 @@ require 'template/back/header.php';
             <div class="subhead">
                 <input role="button" id="save" type="submit"  class="btn btn-success btn-xs new-data" href="#" value="บันทึก"class="glyphicon glyphicon-floppy-save" >
                 
-                <a role="button" class="search-button btn btn-default btn-xs" href="<?php echo $baseUrl; ?>/back/dailyExpensesCategorie">
+                <a role="button" class="search-button btn btn-default btn-xs" href="<?php echo $baseUrl; ?>/back/daily_expenses_categories">
                     <i class="glyphicon glyphicon-remove-circle"></i>
                     ยกเลิก
                 </a>

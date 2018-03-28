@@ -15,6 +15,7 @@ $sql_pc = "SELECT * FROM income_categories  ";
 $sql_pc .= isset($_GET['name']) ? "AND name LIKE '%{$_GET['name']}%'" : "";
 
 
+
 $query_pc = $db->query($sql_pc);
 $rows_pc = $db->rows($query_pc);
 
@@ -44,20 +45,122 @@ require 'template/back/header.php';
  */
 ?>
 
+<script language="javascript">
+$(document).ready(function() {
+    $('#status').hide(); //hide field on start
+  
+    $('#cate_table').change(function() {
+  
+     var $index = $('#cate_table').index(this);
+  
+     if($('#cate_table').val() == 'daily_expenses_categories') { //if this value is NOT selected
+     $('#status').show(); //this field is hidden
+     } 
+     else {
+     $('#status').hide();//else it is shown
+  
+     }
+        });
+ });
+</script>
+
 <div id="page-warpper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><font size="5"><font color="#000">จัดการหมวดหมู่รายรับ</font></font></h1>
+            <h1 class="page-header"><font size="5"><font color="#000">เพิ่มหมวดหมู่</font></font></h1>
         </div>
     </div>
+
+<div class="row">
+<form id="product-form" action="<?php echo $baseUrl; ?>/back/categorie/form_create" method="post">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-horizontal" style="margin-top: 10px;">
+            
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="cate">ประเภทหมวดหมู่</label>
+                    <div class="col-sm-4">
+                                <select class="form-control input-sm" name="cate_table" id="cate_table" required>
+                                    <option value="">--เลือก--</option>
+                                    <option value="income_categories">รายรับ</option>
+                                    <option value="fixed_expenses_categories">รายจ่ายคงที่</option>
+                                    <option value="daily_expenses_categories">รายจ่ายรายวัน</option>
+                                </select>
+                    </div>
+                </div>
+                    <br>
+                <div class="form-group">
+                    <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดหมู่ <span class="required"></span></label>
+                        <div class="col-sm-4">
+                            <input placeholder="กรอกชื่อหมวดหมู่รายจ่ายคงที่" id="name" name="name" class="form-control input-sm" minlength="4" type="text" required>
+                        </div>
+                </div>
+                <div class="form-group" id="status">
+                        <label class="col-sm-2 control-label" for="User_ststus">สถานะ</label>
+                        <div class="col-sm-4">
+                            <select class="form-control input-sm" name="status" id="status" >
+                                <option value="" >--เลือก--</option>
+                                <option value="1">จำเป็น</option>
+                                <option value="0">ไม่จำเป็น</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="submit">
+                <input role="button" id="save" type="submit"  class="btn btn-success btn-xs new-data" href="#" value="บันทึก"class="glyphicon glyphicon-floppy-save">
+        
+                <a role="button" class="btn btn-default btn-xs" href="<?php echo $baseUrl; ?>/back/income_categories">
+                <i class="glyphicon glyphicon-remove-circle"></i>
+                ยกเลิก
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<br><br>
+
+<table border="1" bordercolor="#DCDCDC" width="100%">
+<!-- <body bg color="#00000"> -->
+    <tr>
+        <td bgcolor="#4a7eab" align="center">
+                    <ul  class="nav" >
+                        <li>
+                           <a href="<?php echo $baseUrl; ?>/back/income_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายรับ</font></a>
+                        </li>
+                    </ul>
+        </td>
+        <td bgcolor="#4a7eab" align="center">
+                    <ul id="side-menu" class="nav" >
+                        <li class="dropdown">
+                            <a href="<?php echo $baseUrl; ?>/back/fixed_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายจ่ายคงที่</font></a>
+                        </li>
+                    </ul>
+        </td>
+        <td bgcolor="#4a7eab" align="center">
+                    <ul id="side-menu" class="nav" >
+                        <li class="dropdown">
+                            <a href="<?php echo $baseUrl; ?>/back/daily_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายจ่ายรายวัน</font></a>
+                        </li>
+                    </ul>
+        </td>
+    </tr>
+</table>
+
     <div class="row">
         <div class="col-lg-12">
             <div class="subhead">
-                <a role="button" class="btn btn-success btn-xs new-data"
+                <!-- <a role="button" class="btn btn-success btn-xs new-data"
                    href="<?php echo $baseUrl; ?>/back/incomeCategorie/create">
                     <i class="glyphicon glyphicon-plus-sign"></i>
                     เพิ่มใหม่
-                </a>
+                </a> -->
+                
                 <a role="button" class="search-button btn btn-default btn-xs" href="#">
                     <i class="glyphicon glyphicon-search"></i>
                     ค้นหา
@@ -74,7 +177,7 @@ require 'template/back/header.php';
         <div class="col-lg-12">
             <div class="search-form" style="display:none">
 
-                <form id="yw0" action="<?php echo $baseUrl; ?>/back/incomeCategorie/index" method="get">
+                <form id="yw0" action="<?php echo $baseUrl; ?>/back/income_categories/index" method="get">
                     <div class="form-horizontal" style="margin-top: 10px;">
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">ชื่อหมวดหมู่รายรับ</label>
@@ -95,7 +198,7 @@ require 'template/back/header.php';
                 <!-- <div class="summary">หน้า <?php echo $page;?> จากทั้งหมด <?php echo $pages; ?> หน้า</div> -->
                 <table class="table table-striped table-custom">
                     <thead>
-                        <tr>
+                        <tr bgcolor="#E6E6FA">
                             <!-- <th id="user-grid_c0">
                                 <a class="sort-link" href="<?php echo $uri; ?>">ลำดับรายรับ</a>
                             </th> -->
@@ -120,13 +223,13 @@ require 'template/back/header.php';
                             <tr class="<?php echo $tr; ?>">
                                 
                                 <td>
-                                    <a class="load_data" href="<?php echo $baseUrl; ?>/back/incomeCategorie/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['name']; ?></a>
+                                    <a class="load_data" href="<?php echo $baseUrl; ?>/back/income_categories/update/<?php echo $rs_pc['id']; ?>"><?php echo $rs_pc['name']; ?></a>
                                 </td>
                                 <td><?php echo date("d/m/Y", strtotime($rs_pc['created']));?></td>
                                 <!--<td><?php echo $rs_pc['codename']; ?></td>-->
   <!--                              <td><?php echo thaidate($rs_pc['created']); ?></td>-->
                                 <td class="button-column">
-                                    <a class="btn btn-warning btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/incomeCategorie/update/<?php echo $rs_pc['id']; ?>"><i class="glyphicon glyphicon-edit"></i> แก้ไข</a>
+                                    <a class="btn btn-warning btn-xs load_data" title="" href="<?php echo $baseUrl; ?>/back/income_categories/update/<?php echo $rs_pc['id']; ?>"><i class="glyphicon glyphicon-edit"></i> แก้ไข</a>
                                     <a class="btn btn-danger btn-xs confirm" title="" href="#" data-toggle="modal" data-target="#deleteModal<?php echo $rs_pc['id'];?>"><i class="glyphicon glyphicon-remove"></i> ลบ</a>
                                     <!-- Modal -->
                                     <div class="modal fade" id="deleteModal<?php echo $rs_pc['id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -141,7 +244,7 @@ require 'template/back/header.php';
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">ไม่ใช่</button>
-                                                    <a role="button" class="btn btn-primary" href="<?php echo $baseUrl; ?>/back/incomeCategorie/delete/<?php echo $rs_pc['id']; ?>">ใช่ ยืนยันการลบ</a>
+                                                    <a role="button" class="btn btn-primary" href="<?php echo $baseUrl; ?>/back/income_categories/delete/<?php echo $rs_pc['id']; ?>">ใช่ ยืนยันการลบ</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -179,7 +282,7 @@ require 'template/back/header.php';
 /*
  * footer***********************************************************************
  */
-require 'template/back/footer.php';
+// require 'template/back/footer.php';
 /*
  * footer***********************************************************************
  */

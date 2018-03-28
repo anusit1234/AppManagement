@@ -4,13 +4,13 @@
  */
 $db = new database();
 $option_pc = array(
-    "table" => "income_categories",
+    "table" => "fixed_expenses_categories",
     "condition" => "id='{$_GET['id']}' "
 );
 $query_pc = $db->select($option_pc);
 $rs_pc = $db->get($query_pc);
 
-$title = 'แก้ไขหมวดหมู่รายรับ : ' .$rs_pc['name'];
+$title = 'แก้ไขหมวดหมู่รายจ่ายคงที่ : ' .$rs_pc['name'];
 /*
  * php code///////////**********************************************************
  */
@@ -30,16 +30,16 @@ require 'template/back/header.php';
             <h1 class="page-header"><font size="5">แก้ไขข้อมูล <?php echo $rs_pc['name']; ?></font></h1>
         </div>
     </div>
-    <form id="product-form" action="<?php echo $baseUrl; ?>/back/incomeCategorie/form_update" method="post">
+    <form id="product-form" action="<?php echo $baseUrl; ?>/back/fixed_expenses_categories/form_update" method="post">
     <div class="row">
         <div class="col-lg-12">
             <div class="form-horizontal" style="margin-top: 10px;">
                 
                     <input type="hidden" name="id" value="<?php echo $rs_pc['id'];?>">
                     <div class="form-group">
-                        <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดรายรับ <span class="required">*</span></label>
+                        <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดรายจ่ายคงที่ <span class="required">*</span></label>
                         <div class="col-sm-4">
-                            <input type="text" id="name" name="name" class="form-control input-sm"  value="<?php echo $rs_pc['name']; ?>" required>
+                            <input type="text" id="name" name="name" class="form-control input-sm"  value="<?php echo $rs_pc['name']; ?>" required >
                         </div>
                     </div>
                     <!--<div class="form-group">
@@ -57,7 +57,7 @@ require 'template/back/header.php';
         <div class="col-lg-12">
             <div class="subhead">
             <input role="button" id="save" type="submit"  class="btn btn-success btn-xs new-data" href="#" value="บันทึก"class="glyphicon glyphicon-floppy-save" >
-                <a role="button" class="search-button btn btn-default btn-xs" href="<?php echo $baseUrl; ?>/back/incomeCategorie">
+                <a role="button" class="search-button btn btn-default btn-xs" href="<?php echo $baseUrl; ?>/back/fixed_expenses_categories">
                     <i class="glyphicon glyphicon-remove-circle"></i>
                     ยกเลิก
                 </a>
