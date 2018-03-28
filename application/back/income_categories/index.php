@@ -125,24 +125,24 @@ $(document).ready(function() {
 </div>
 <br><br>
 
-<table border="1" bordercolor="#DCDCDC" width="100%">
+<table border="1" bordercolor="#f3f3fa" width="100%">
 <!-- <body bg color="#00000"> -->
     <tr>
-        <td bgcolor="#dfdff6" align="center">
+        <td bgcolor="#bdc4f6" align="center">
                     <ul  class="nav" >
                         <li>
                            <a href="<?php echo $baseUrl; ?>/back/income_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายรับ</font></a>
                         </li>
                     </ul>
         </td>
-        <td bgcolor="#dfdff6" align="center">
+        <td bgcolor="#bdc4f6" align="center">
                     <ul id="side-menu" class="nav" >
                         <li class="dropdown">
                             <a href="<?php echo $baseUrl; ?>/back/fixed_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายจ่ายคงที่</font></a>
                         </li>
                     </ul>
         </td>
-        <td bgcolor="#dfdff6" align="center">
+        <td bgcolor="#bdc4f6" align="center">
                     <ul id="side-menu" class="nav" >
                         <li class="dropdown">
                             <a href="<?php echo $baseUrl; ?>/back/daily_expenses_categories"><i class="glyphicon glyphicon-list-alt"></i>  <font color="#7cb8eb">หมวดหมู่รายจ่ายรายวัน</font></a>
