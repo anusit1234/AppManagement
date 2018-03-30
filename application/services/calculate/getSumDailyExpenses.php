@@ -9,7 +9,7 @@ $id = $_GET['user_id'];
 $month = $_GET['month'];
 
     
-$sql = "SELECT sum(amount) as totalDailyExp, month(created) as month FROM daily_expenses where user_id='$id'and  MONTH(created)='$month' order by created DESC";
+$sql = "SELECT sum(amount) as totalDailyExp FROM daily_expenses where user_id='$id'and  MONTH(created)='$month' order by created DESC";
 
 
 $query = $db->query($sql);
