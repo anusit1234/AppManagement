@@ -8,7 +8,7 @@ $db = new database();
 $id = $_GET['user_id'];
 $month = $_GET['month'];
     
-$sql = "SELECT sum(amount) as totalIncome, MONTH(created) as month FROM income where user_id='$id' and  MONTH(created)='$month' order by created DESC";
+$sql = "SELECT sum(amount) as totalIncome FROM income where user_id='$id' and  MONTH(created)='$month' order by created DESC";
 
 
 $query = $db->query($sql);
