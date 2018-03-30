@@ -5,7 +5,7 @@ header("Content-Type: application/json; charset=UTF-8");
 $db = new database();
 
     
-$sql = "SELECT name FROM fixed_expenses_categories";
+$sql = "SELECT * FROM fixed_expenses_categories";
 
 
 $query = $db->query($sql);
