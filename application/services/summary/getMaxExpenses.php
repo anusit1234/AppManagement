@@ -6,6 +6,7 @@ $db = new database();
 
 // $i = 3 ;   //test 
 $id = $_GET['user_id'];
+$month = $_GET['month'];
 
 $sql = "SELECT
 	        t1.daily_expenses_id as dailyExpensesId,
@@ -20,7 +21,7 @@ $sql = "SELECT
         INNER JOIN payment_channel_categories t3 ON
             t1.payment_channel_id = t3.id
         WHERE
-            t1.user_id = '$id' GROUP BY t2.name order by t1.amount DESC
+            t1.user_id = '$id' and  MONTH(t1.created)='$month' GROUP BY t2.name order by t1.amount DESC
             ";
 
 $query = $db->query($sql);

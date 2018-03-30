@@ -6,9 +6,10 @@ $db = new database();
 
 // $i = 3 ;
 $id = $_GET['user_id'];
+$month = $_GET['month'];
 
     
-$sql = "SELECT sum(amount) as totalDailyExp FROM daily_expenses where user_id='$id'";
+$sql = "SELECT sum(amount) as totalDailyExp FROM daily_expenses where user_id='$id'and  MONTH(created)='$month' order by created DESC";
 
 
 $query = $db->query($sql);
