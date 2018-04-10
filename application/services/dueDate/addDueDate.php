@@ -14,7 +14,15 @@ $electricity = $objData->data->electricity;
 $internet = $objData->data->internet;
 $telephone = $objData->data->telephone;
 $credit_card = $objData->data->credit_card;
+$credit_card2 = $objData->data->credit_card2;
+$credit_card3 = $objData->data->credit_card3;
+$credit_card4 = $objData->data->credit_card4;
+$credit_card5 = $objData->data->credit_card5;
 $credit_card_id = $objData->data->credit_card_id;
+$credit_card_id2 = $objData->data->credit_card_id2;
+$credit_card_id3 = $objData->data->credit_card_id3;
+$credit_card_id4 = $objData->data->credit_card_id4;
+$credit_card_id5 = $objData->data->credit_card_id5;
     
 
 // $db = new database();
@@ -33,7 +41,15 @@ $credit_card_id = $objData->data->credit_card_id;
             "internet" => $internet,
             "telephone" => $telephone,
             "credit_card" => $credit_card,
+            "credit_card2" => $credit_card2,
+            "credit_card3" => $credit_card3,
+            "credit_card4" => $credit_card4,
+            "credit_card5" => $credit_card5,
             "credit_card_id" => $credit_card_id,
+            "credit_card_id2" => $credit_card_id2,
+            "credit_card_id3" => $credit_card_id3,
+            "credit_card_id4" => $credit_card_id4,
+            "credit_card_id5" => $credit_card_id5,
             "created" => date('Y-m-d')
         );
         $query_due_date = $db->insert("due_date", $value_due_date);
