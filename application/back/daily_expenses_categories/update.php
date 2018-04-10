@@ -39,7 +39,7 @@ require 'template/back/header.php';
                 
                     <input type="hidden" name="id" value="<?php echo $rs_pc['id'];?>">
                     <div class="form-group">
-                        <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดรายจ่ายรายวัน <span class="required">*</span></label>
+                        <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดรายจ่ายรายวัน <span class="required"></span></label>
                         <div class="col-sm-4">
                             <input type="text" id="name" name="name" class="form-control input-sm" data-validation="required" value="<?php echo $rs_pc['name']; ?>" required >
                         </div>
