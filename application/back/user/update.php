@@ -57,7 +57,7 @@ require 'template/back/header.php';
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label required" for="User_name">นามสกุล <span class="required">*</span></label>
+                        <label class="col-sm-2 control-label required" for="User_name">นามสกุล <span class="required"></span></label>
                         <div class="col-sm-4">
                              <input id="surname" name="surname" class="form-control input-sm" minlength="4" maxlength="50" type="text" value="<?php echo $rs_user['surname'];?>" required>
                         </div>
