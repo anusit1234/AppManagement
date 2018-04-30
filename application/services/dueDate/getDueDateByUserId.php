@@ -50,7 +50,8 @@ FROM (SELECT water,
                          
               (SELECT t1.credit_card5 as credit_card,
                            t2.name as credit 
-                           FROM due_date t1 INNER JOIN credit_cards_categories t2 on t1.credit_card_id5 = t2.id WHERE user_id='$id') as C5 ";
+                           FROM due_date t1 INNER JOIN credit_cards_categories t2 on t1.credit_card_id5 = t2.id WHERE user_id='$id') as C5 
+";
 
 
 $query = $db->query($sql);

@@ -12,7 +12,7 @@ $user_id = $objData->data->user_id;
 $income_id = $objData->data->income_id;
 $income_cate_id = $objData->data->income_cate_id;
 $amount = $objData->data->amount;
-// $images = $objData->data->images;
+$images = $objData->data->images;
 $created = $objData->data->created;
     
 
@@ -20,7 +20,7 @@ $created = $objData->data->created;
             // "user_id" => $user_id,
             "income_cate_id" => $income_cate_id,
             "amount" => $amount,
-            // "images" => $images,
+            "images" => $images,
             "created" => $created
         );
         $query_income = $db->update("income", $value_income, "income_id='$income_id' ");

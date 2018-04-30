@@ -8,6 +8,7 @@ $data = file_get_contents("php://input");   //รับค่าจาก ionic
 
 $objData = json_decode($data);              //แปลง json เป็น object
 
+$user_id = $objData->data->user_id;
 $name = $objData->data->name;
 $surname = $objData->data->surname;
 $email = $objData->data->email;

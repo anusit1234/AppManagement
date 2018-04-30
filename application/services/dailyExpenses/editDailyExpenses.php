@@ -13,7 +13,7 @@ $daily_expenses_id = $objData->data->daily_expenses_id;
 $daily_expenses_cate_id = $objData->data->daily_expenses_cate_id;
 $amount = $objData->data->amount;
 $payment_channel_id = $objData->data->payment_channel_id;
-// $images = $objData->data->images;
+$images = $objData->data->images;
 $created = $objData->data->created;
     
 
@@ -22,7 +22,7 @@ $created = $objData->data->created;
             "daily_expenses_cate_id" => $daily_expenses_cate_id,
             "payment_channel_id" => $payment_channel_id,
             "amount" => $amount,
-            // "images" => $images,
+            "images" => $images,
             "created" => $created
         );
         $query_dailyExp = $db->update("daily_expenses", $value_dailyExp, "daily_expenses_id='$daily_expenses_id'");
