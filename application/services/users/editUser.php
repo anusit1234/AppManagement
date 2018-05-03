@@ -19,37 +19,27 @@ $career = $objData->data->career;
 $permission = "member";
     
 
-// $db = new database();
-    // $sql = "SELECT name FROM users where email='$email' and permission='member'";
-    // $query = $db->query($sql);
-    // $rows = $db->rows($query);
+    $value_user = array(
+        "name" => $name,
+        "surname" => $surname,
+        "email" => $email,
+        "password" => $password,
+        "age" => $age,
+        "sex" => $sex,
+        "career" => $career,
+        "permission" => $permission,
+        "created" => date('Y-m-d')
+    );
 
-    // if($rows > 0){
-    //     echo json_encode(null);
-    // }
-    // else{
-        $value_user = array(
-            "name" => $name,
-            "surname" => $surname,
-            "email" => $email,
-            "password" => $password,
-            "age" => $age,
-            "sex" => $sex,
-            "career" => $career,
-            // "permission" => $permission,
-            "created" => date('Y-m-d')
-        );
-        $query_user = $db->update("users", $value_user, "user_id='$user_id' ");
+        $query_user = $db->update("users", $value_user, "id='$user_id' ");
 
         if ($query_user == TRUE) {
 
-            if ($query_income == TRUE) {
-
-                echo json_encode("success");
-            }
-            else{
-                echo json_encode(null);
-            }
+            echo json_encode("success");
         }
+        else{
+            echo json_encode(null);
+        }
+
 
 ?>
