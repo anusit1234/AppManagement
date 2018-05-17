@@ -16,6 +16,7 @@ $age = $objData->data->age;
 $sex = $objData->data->sex;
 $career = $objData->data->career;
 $permission = "member";
+$status = 1;
     
 
 // $db = new database();
@@ -36,6 +37,7 @@ $permission = "member";
             "sex" => $sex,
             "career" => $career,
             "permission" => $permission,
+            "status" => $status,
             "created" => date('Y-m-d')
         );
         $query_user = $db->insert("users", $value_user);

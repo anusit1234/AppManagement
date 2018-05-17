@@ -8,7 +8,7 @@ $db = new database();
 $email = $_GET['email'];
 $password = $_GET['password'];
     
-$sql = "SELECT * FROM users where email='$email' and password='$password' and permission='member'";
+$sql = "SELECT * FROM users where email='$email' and password='$password' and permission='member' and status='1' ";
 
 $query = $db->query($sql);
 $num = mysqli_num_rows($query);

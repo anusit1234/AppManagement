@@ -15,7 +15,7 @@ $query = $db->query($sql);
 
 $arr = array();
     while($rows = mysqli_fetch_assoc($query)){
-        $arr[] = $rows;
+        $arr = $rows;
     }
     
     echo json_encode($arr);

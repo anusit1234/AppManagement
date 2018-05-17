@@ -1,11 +1,11 @@
 <?php
 
 function base_url() {
-    return "http://chinhosting.com/web/AppManagement";
+    return "http://183.88.212.150/rally_std";
 }
 
 function base_path() {
-    return $_SERVER['DOCUMENT_ROOT'] . "/web/AppManagement";
+    return $_SERVER['DOCUMENT_ROOT'] . "/rally_std";
 }
 
 function salt_pass($pass) {
