@@ -39,7 +39,7 @@ require 'template/back/header.php';
                         <div class="col-sm-4">
                         <table width="420">
                             <tr>
-                                <td><input placeholder="กรอกชื่อหมวดหมู่รายรับ" id="name" name="name" class="form-control input-sm" minlength="2" type="text" required></td>
+                                <td><input placeholder="กรอกชื่อหมวดหมู่รายรับ" id="name" name="name" class="form-control input-sm" minlength="4" manlength="40" type="text" required></td>
                                 <td><font color="red">&nbsp;<b>*</b></font></td>
                             </tr>
                         </table>

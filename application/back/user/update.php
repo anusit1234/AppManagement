@@ -51,22 +51,22 @@ require 'template/back/header.php';
                     <div class="form-group">
                         <label class="col-sm-2 control-label required" for="User_name">ชื่อ<span class="required"></span></label>
                         <div class="col-sm-4">
-                            <input placeholder="กรอกข้อมูลชื่อ" id="name" name="name" class="form-control input-sm" minlength="4" maxlength="50" type="text" value="<?php echo $rs_user['name'];?>" required>
+                            <input placeholder="กรอกข้อมูลชื่อ" id="name" name="name" class="form-control input-sm" minlength="2" maxlength="30" type="text" value="<?php echo $rs_user['name'];?>" required>
                                 
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label required" for="User_name">นามสกุล <span class="required"></span></label>
+                        <label class="col-sm-2 control-label required" for="User_name">นามสกุล <span class="required">*</span></label>
                         <div class="col-sm-4">
-                             <input id="surname" name="surname" class="form-control input-sm" minlength="4" maxlength="50" type="text" value="<?php echo $rs_user['surname'];?>" required>
+                             <input id="surname" name="surname" class="form-control input-sm" minlength="2" maxlength="30" type="text" value="<?php echo $rs_user['surname'];?>" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="User_email">email</label>
                         <div class="col-sm-4">
-                            <input class="form-control input-sm" maxlength="200" name="email" id="email" type="email" value="<?php echo $rs_user['email'];?>"required />
+                            <input class="form-control input-sm" maxlength="50" name="email" id="email" type="email" value="<?php echo $rs_user['email'];?>"required />
                         </div>
                     </div>
                     <div class="form-group">

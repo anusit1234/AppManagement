@@ -39,7 +39,7 @@ require 'template/back/header.php';
                     <div class="form-group">
                         <label for="Product_name" class="col-sm-2 control-label required">ชื่อหมวดรายรับ <span class="required">*</span></label>
                         <div class="col-sm-4">
-                            <input type="text" id="name" name="name" class="form-control input-sm"  value="<?php echo $rs_pc['name']; ?>" required>
+                            <input type="text" id="name" name="name" minlength="4" manlength="40" class="form-control input-sm"  value="<?php echo $rs_pc['name']; ?>" required>
                         </div>
                     </div>
                     <!--<div class="form-group">
